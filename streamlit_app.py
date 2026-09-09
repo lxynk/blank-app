@@ -1,18 +1,17 @@
 import streamlit as st
 
-st.title("🎈🎈🎈 Just baloons and not math")
+st.title("🎈🎈🎈 Just baloons and no math")
 st.write(
-    "I'm really into colors, I hope you too! Guess which is my favorite?"
+    "I'm really into colors, I hope you too! Sharan, can you guess what is my favorite color?"
 )
 
 options = ["1+3", "9-5", "2^2"]
 
 answer = st.radio(
-    "Sharan, what do you think is NOT my favorite color?",
-    key="colors",
     options=options,
 )
 
 submitted = st.button("Guess")
 if submitted and answer in options:
     st.write("Riiiiight!")
+    st.balloons()
