@@ -8,6 +8,7 @@ st.write(
 options = ["1+3", "9-5", "2^2"]
 
 answer = st.radio(
+    "",
     options=options,
 )
 
