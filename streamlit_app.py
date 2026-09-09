@@ -28,3 +28,5 @@ if submitted and answer in ["none of the above", "none of the above"]:
     st.balloons()
 elif submitted and answer not in ["none of the above"]:
     st.write("Sigh...")
+else:
+    pass
