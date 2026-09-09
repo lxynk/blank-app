@@ -13,8 +13,6 @@ answer = st.radio(
     options=options,
 )
 
-st.button("Guess")
-if answer == "9-5":
-    st.write("Riiiiight!")
-else:
+submitted = st.button("Guess")
+if submitted and answer in options:
     st.write("Riiiiight!")
