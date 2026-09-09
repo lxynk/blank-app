@@ -14,10 +14,11 @@ e = "none of the above"
 answer = st.radio(
     "Sharan, to check your sense of typographic beauty, guess what I find disturbing:",
     [a,b,d,c,e],
+    index=None,
 )
 
 submitted = st.button("Guess")
-if submitted:
+if answer and submitted:
     if answer in [b,c]:
         st.write("Riiiiight!")
         st.balloons()
