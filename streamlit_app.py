@@ -11,16 +11,9 @@ c = "double spaces between words (can you find any?)"
 d = st.latex(r"a^2")
 e = "none of the above"
 
-options = [
-    a,
-    b,
-    c,
-    d,
-    e]
-
 answer = st.radio(
     "Sharan, to check your sense of typographic beauty, guess what I find disturbing:",
-    options=options,
+    options=[a,b,c,d,e],
 )
 
 submitted = st.button("Guess")
