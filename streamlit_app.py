@@ -23,10 +23,8 @@ answer = st.radio(
 )
 
 submitted = st.button("Guess")
-if submitted and answer in ["none of the above", "none of the above"]:
+if submitted and answer == "none of the above":
     st.write("Riiiiight!")
     st.balloons()
-elif submitted and answer not in ["none of the above"]:
-    st.write("Sigh...")
 else:
-    pass
+    st.write("Sigh...")
