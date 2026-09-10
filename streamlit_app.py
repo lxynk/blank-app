@@ -70,3 +70,21 @@ with tab2:
     })
 
     st.dataframe(df)
+
+    num_lang = len(df.languages.unique().tolist())
+
+    if "rand_id" not in st.session_state:
+        st.session_state.rand_id = np.random.randint(0, num_lang)
+
+    rand_id = st.session_state.rand_id
+
+    rand_cont = df['continents'].iloc[rand_id]
+    question = f"On which continent is {df.languages.iloc[rand_id]} spoken?"
+    reply = st.selectbox(question, df.continents, index=None)
+
+    if reply == df['continents'].iloc[rand_id]:
+        st.success('Well done!')
+    elif reply == None:
+        pass
+    else:
+        st.error('Nope :(')
